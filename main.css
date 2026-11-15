@@ -1,0 +1,150 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 40px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #dce3eb;
+  font-family: 'Times New Roman', Times, serif;
+  color: #090a0a;
+}
+
+.todo-container {
+  width: 100%;
+  max-width: 520px;
+  padding: 28px;
+  background: #1d85bc;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(8, 58, 175, 0.1);
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  color: #1d0b1e;
+}
+
+.subtitle {
+  margin: 8px 0 24px;
+  text-align: center;
+  color: #0c0905;
+}
+
+#todo-form {
+  display: flex;
+  gap: 10px;
+}
+
+#todo-input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #b10d75;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 15px;
+  background: #c40909;
+  color: rgb(198, 204, 214);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #dbe7ed;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 22px 0 14px;
+}
+
+.filter {
+  background: #a4b2b0;
+  color: #060709;
+}
+
+.filter:hover,
+.filter.active {
+  background: #150f14;
+  color: #cba9a9;
+}
+
+#todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 4px;
+  border-bottom: 1px solid #cfc3bd;
+}
+
+.todo-item span {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.todo-item.completed span {
+  color: #e7c6c7;
+  text-decoration: line-through;
+}
+
+.todo-item input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  padding: 7px 10px;
+  background: #2b2796;
+}
+
+.delete-btn:hover {
+  background: #0c2d65;
+}
+
+#empty-message {
+  display: none;
+  padding: 18px 0;
+  text-align: center;
+  color: #d6d9de;
+}
+
+.task-count {
+  margin: 18px 0 0;
+  color: #030609;
+  font-size: 13px;
+  text-align: right;
+}
+
+@media (max-width: 480px) {
+  .todo-container {
+    padding: 20px;
+  }
+
+  #todo-form {
+    gap: 6px;
+  }
+
+  button {
+    padding: 10px 12px;
+  }
+}
